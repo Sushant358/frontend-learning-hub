@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CSS Handbook from beginner to advanced with practical examples.">
+<title>CSS Handbook — Basic to Advanced</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="hero">
+<div class="eyebrow">Web development learning library</div>
+<nav class="top-nav" aria-label="Learning paths"><a href="index.html">HTML</a><a class="active" href="css.html">CSS</a><a class="" href="javascript.html">JavaScript</a></nav>
+<h1>CSS Handbook</h1><p>A practical CSS guide covering selectors, the cascade, box model, typography, Flexbox, Grid, responsive design, animation, and modern CSS.</p>
+<div class="chips"><span>Beginner → Advanced</span><span>Practical examples</span><span>Connected to HTML</span><span>Works offline</span></div>
+</div></header>
+<div class="layout">
+<nav aria-label="Table of contents"><h2>Contents</h2><div class="links"><a href="#css-start">1. Getting started with CSS</a><a href="#css-syntax">2. CSS syntax and selectors</a><a href="#css-cascade">3. Cascade, inheritance, and specificity</a><a href="#css-units">4. Colors, values, and units</a><a href="#css-box">5. The box model</a><a href="#css-typography">6. Typography and text</a><a href="#css-background">7. Backgrounds, borders, and shadows</a><a href="#css-display">8. Display and positioning</a><a href="#css-flex">9. Flexbox</a><a href="#css-grid">10. CSS Grid</a><a href="#css-responsive">11. Responsive design and media queries</a><a href="#css-transforms">12. Transitions, transforms, and animations</a><a href="#css-variables">13. Custom properties and functions</a><a href="#css-advanced">14. Advanced CSS tools</a><a href="#css-accessibility">15. Accessibility and best practices</a><a href="#css-practice">16. Practice project: responsive profile card</a></div></nav>
+<main>
+<div class="note"><strong>How the three technologies work together:</strong> HTML creates the structure, CSS styles it, and JavaScript adds behavior. All three guides share <code>style.css</code> and <code>script.js</code>.</div>
+<section id="css-start">
+<span class="tag">CSS LEARNING PATH</span>
+<h2>1. Getting started with CSS</h2>
+<p>CSS (Cascading Style Sheets) controls how HTML looks: colors, spacing, typography, layout, animation, and responsive behavior.</p>
+<pre><code>/* External stylesheet */
+h1 { color: royalblue; }
+.card { padding: 1rem; border-radius: 12px; }
+
+/* Connect CSS to HTML inside &lt;head&gt; */
+&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+</section><section id="css-syntax">
+<span class="tag">CSS LEARNING PATH</span>
+<h2>2. CSS syntax and selectors</h2>
+<p>A CSS rule contains a selector and a declaration block. Selectors choose the HTML elements to style.</p>
+<pre><code>/* Element, class, and ID selectors */
+p { line-height: 1.6; }
+.card { padding: 16px; }
+#main-title { color: navy; }
+
+/* Grouping, descendant, child, attribute, pseudo-class */
+h1, h2 { font-family: system-ui; }
+nav a { text-decoration: none; }
+ul &gt; li { margin-block: 6px; }
+input[type="email"] { border-color: teal; }
+button:hover { transform: translateY(-2px); }
+a:focus-visible { outline: 3px solid orange; }</code></pre>
+</section><section id="css-cascade">
+<span class="tag">CSS LEARNING PATH</span>
+<h2>3. Cascade, inheritance, and specificity</h2>
+<p>When declarations conflict, CSS resolves them using origin, importance, cascade layers, specificity, and source order. Some properties inherit from parents.</p>
+<pre><code>/* Prefer simple selectors and predictable source order */
+:root { color: #182033; }
+body { font-family: system-ui, sans-serif; }
+.card { color: #334155; }
+.card strong { color: #111827; }
+
+/* Avoid overusing !important */
+.notice { color: crimson; }</code></pre>
+</section><section id="css-units">
+<span class="tag">CSS LEARNING PATH</span>
+<h2>4. Colors, values, and units</h2>
+<p>Use suitable units: px for fine details, rem for scalable typography and spacing, %, vw/vh for relative sizing, and fr for grid tracks.</p>
+<pre><code>:root {
+  --brand: #4f46e5;
+  --space: 1rem;
+}
+.box {
+  width: min(90%, 70rem);
+  padding: var(--space);
+  font-size: 1rem;
+  color: #172033;
+  background: rgb(79 70 229 / 10%);
+  border: 1px solid hsl(230 20% 85%);
+}</code></pre>
+</section><section id="css-box">
+<span class="tag">CSS LEARNING PATH</span>
+<h2>5. The box model</h2>
+<p>Every element is a box: content, padding, border, and margin. `box-sizing: border-box` makes declared dimensions include padding and border.</p>
+<pre><code>* { box-sizing: border-box; }
+.card {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin: 16px 0;
+}</code></pre>
+</section><section id="css-typography">
+<span class="tag">CSS LEARNING PATH</span>
+<h2>6. Typography and text</h2>
+<p>Control font family, size, weight, line height, letter spacing, alignment, and text decoration. Keep body text comfortable to read.</p>
+<pre><code>body { font-family: Inter, system-ui, sans-serif; }
+h1 { font-size: clamp(2rem, 5vw, 4rem); line-height: 1.1; }
+p { max-width: 65ch; line-height: 1.7; }
+.small { font-size: .875rem; font-weight: 600; }</code></pre>
+</section><section id="css-background">
+<span class="tag">CSS LEARNING PATH</span>
+<h2>7. Backgrounds, borders, and shadows</h2>
+<p>CSS supports solid colors, gradients, background images, border styles, rounded corners, outlines, and shadows.</p>
+<pre><code>.hero {
+  background: linear-gradient(120deg, #312e81, #0891b2);
+  color: white;
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 30px rgb(15 23 42 / 15%);
+}</code></pre>
+</section><section id="css-display">
+<span class="tag">CSS LEARNING PATH</span>
+<h2>8. Display and positioning</h2>
+<p>`display` controls layout behavior. Positioning options include static, relative, absolute, fixed, and sticky. Use these intentionally.</p>
+<pre><code>.hidden { display: none; }
+.inline-item { display: inline-block; }
+.badge { position: relative; }
+.tooltip { position: absolute; inset-block-start: 100%; }
+.site-nav { position: sticky; top: 0; z-index: 10; }</code></pre>
+</section><section id="css-flex">
+<span class="tag">CSS LEARNING PATH</span>
+<h2>9. Flexbox</h2>
+<p>Flexbox is ideal for one-dimensional layouts: arranging items in a row or column and distributing available space.</p>
+<pre><code>.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.actions { display: flex; gap: .5rem; }</code></pre>
+</section><section id="css-grid">
+<span class="tag">CSS LEARNING PATH</span>
+<h2>10. CSS Grid</h2>
+<p>Grid is designed for two-dimensional layouts with rows and columns. Combine it with `minmax()` and `auto-fit` for responsive grids.</p>
+<pre><code>.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.dashboard {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-areas: "sidebar content";
+}</code></pre>
+</section><section id="css-responsive">
+<span class="tag">CSS LEARNING PATH</span>
+<h2>11. Responsive design and media queries</h2>
+<p>Responsive design adapts content to different screen sizes. Start with flexible layouts, then add breakpoints when the content needs them.</p>
+<pre><code>img { max-width: 100%; height: auto; }
+.container { width: min(100% - 2rem, 1100px); margin-inline: auto; }
+
+@media (max-width: 700px) {
+  .dashboard { grid-template-columns: 1fr; }
+  .desktop-only { display: none; }
+}</code></pre>
+</section><section id="css-transforms">
+<span class="tag">CSS LEARNING PATH</span>
+<h2>12. Transitions, transforms, and animations</h2>
+<p>Transitions smooth changes between states. Transforms move, rotate, scale, or skew elements. Keyframes define multi-step animations.</p>
+<pre><code>.button { transition: transform .2s ease, background .2s ease; }
+.button:hover { transform: translateY(-2px); }
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+.pulse { animation: pulse 1.5s infinite; }</code></pre>
+</section><section id="css-variables">
+<span class="tag">CSS LEARNING PATH</span>
+<h2>13. Custom properties and functions</h2>
+<p>CSS variables make themes and repeated values easier to maintain. Useful functions include `calc()`, `min()`, `max()`, and `clamp()`.</p>
+<pre><code>:root {
+  --surface: white;
+  --text: #172033;
+  --accent: #4f46e5;
+}
+.panel { background: var(--surface); color: var(--text); }
+.title { font-size: clamp(1.8rem, 4vw, 3rem); }
+.wide { width: min(100% - 2rem, 72rem); }</code></pre>
+</section><section id="css-advanced">
+<span class="tag">CSS LEARNING PATH</span>
+<h2>14. Advanced CSS tools</h2>
+<p>Explore pseudo-elements, attribute selectors, logical properties, filters, masks, container queries, cascade layers, and modern color features.</p>
+<pre><code>.quote::before { content: "“"; }
+.panel { padding-inline: 1rem; margin-block: 2rem; }
+
+@layer reset, components, utilities;
+@container (min-width: 500px) {
+  .card-layout { grid-template-columns: 1fr 1fr; }
+}</code></pre>
+</section><section id="css-accessibility">
+<span class="tag">CSS LEARNING PATH</span>
+<h2>15. Accessibility and best practices</h2>
+<p>Keep visible focus indicators, sufficient contrast, readable text, and reduced motion support. Never use CSS alone to communicate important meaning.</p>
+<pre><code>button:focus-visible, a:focus-visible {
+  outline: 3px solid #f59e0b;
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}</code></pre>
+</section><section id="css-practice">
+<span class="tag">CSS LEARNING PATH</span>
+<h2>16. Practice project: responsive profile card</h2>
+<p>Build a profile card with a portrait, short bio, and action links. Make it work on mobile and desktop, and test keyboard focus.</p>
+<pre><code>&lt;article class="profile-card"&gt;
+  &lt;img src="avatar.jpg" alt="Portrait of Alex"&gt;
+  &lt;div&gt;
+    &lt;h2&gt;Alex Morgan&lt;/h2&gt;
+    &lt;p&gt;Frontend developer learning CSS.&lt;/p&gt;
+    &lt;a href="#projects"&gt;View projects&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: 1rem;
+  background: white;
+}
+.profile-card img { width: 96px; aspect-ratio: 1; border-radius: 50%; object-fit: cover; }
+@media (max-width: 480px) { .profile-card { flex-direction: column; text-align: center; } }</code></pre>
+</section>
+<section><h2>Continue learning</h2><p><a href="index.html">← Previous: HTML</a> · <a href="javascript.html">Next: JavaScript →</a></p><p>Keep all project files in the same folder so the links and shared assets work correctly.</p></section>
+<footer>CSS Handbook · Learning library · <a href="index.html">HTML</a> · <a href="css.html">CSS</a> · <a href="javascript.html">JavaScript</a></footer>
+</main></div>
+<script src="script.js" defer></script>
+</body></html>

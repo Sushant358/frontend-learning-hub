@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A beginner-to-advanced HTML reference with examples of common HTML elements, forms, semantic markup, accessibility, and modern features.">
+  <title>HTML Handbook — Web Development Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="hero">
+    <div class="eyebrow">Web development learning library</div>
+    <nav class="top-nav" aria-label="Learning paths"><a class="active" href="index.html">HTML</a><a href="css.html">CSS</a><a href="javascript.html">JavaScript</a></nav>
+    <h1>HTML Handbook</h1>
+    <p>A practical reference to HTML from basic to advanced. Learn document structure, text, links, images, tables, forms, semantic HTML, accessibility, and modern browser features.</p>
+    <div class="chips"><span>Beginner → Advanced</span><span>Examples included</span><span>Connected learning library</span><span>Works offline</span></div>
+  </div>
+</header>
+
+<div class="layout">
+<nav aria-label="Table of contents">
+  <h2>Contents</h2>
+  <div class="links">
+    <a href="#start">1. Getting started</a><a href="#structure">2. Structure</a><a href="#text">3. Text</a>
+    <a href="#links">4. Links and paths</a><a href="#lists">5. Lists</a><a href="#images">6. Images</a>
+    <a href="#media">7. Audio and video</a><a href="#tables">8. Tables</a><a href="#semantic">9. Semantic HTML</a>
+    <a href="#forms">10. Forms</a><a href="#attributes">11. Attributes</a><a href="#entities">12. Entities</a>
+    <a href="#embed">13. Embedded content</a><a href="#interactive">14. Interactive elements</a><a href="#metadata">15. Metadata</a>
+    <a href="#accessibility">16. Accessibility</a><a href="#advanced">17. Advanced HTML</a><a href="#obsolete">18. Obsolete elements</a>
+    <a href="#practice">19. Practice project</a><a href="#cheatsheet">20. Cheat sheet</a>
+  </div>
+</nav>
+
+<main>
+<section id="start">
+  <span class="tag">LEVEL 1 · BASICS</span><h2>1. Getting started with HTML</h2>
+  <p><strong>HTML</strong> means HyperText Markup Language. It defines the structure and meaning of web content. HTML is a markup language, not a programming language.</p>
+  <div class="grid"><div class="mini"><strong>HTML</strong>Structure and content</div><div class="mini"><strong>CSS</strong>Appearance and layout</div><div class="mini"><strong>JavaScript</strong>Behavior and interaction</div></div>
+  <h3>Your first web page</h3>
+  <ol><li>Open a text editor, such as Notepad or VS Code.</li><li>Write the code below.</li><li>Save it as <code>index.html</code>.</li><li>Open the file in a web browser.</li></ol>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;My First Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, world!&lt;/h1&gt;
+  &lt;p&gt;I am learning HTML.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  <div class="note">Most elements use an opening tag, content, and closing tag. Void elements such as <code>img</code>, <code>br</code>, <code>hr</code>, and <code>input</code> do not have closing tags.</div>
+</section>
+
+<section id="structure">
+  <h2>2. HTML document structure</h2>
+  <table><thead><tr><th>Element / declaration</th><th>Purpose</th></tr></thead><tbody>
+  <tr><td><code>&lt;!DOCTYPE html&gt;</code></td><td>Declares a modern HTML document.</td></tr>
+  <tr><td><code>&lt;html lang="en"&gt;</code></td><td>Root element; declares the page language.</td></tr>
+  <tr><td><code>&lt;head&gt;</code></td><td>Holds metadata, title, and resource links.</td></tr>
+  <tr><td><code>&lt;meta charset="UTF-8"&gt;</code></td><td>Sets character encoding.</td></tr>
+  <tr><td><code>&lt;meta name="viewport"...&gt;</code></td><td>Helps the layout work on mobile devices.</td></tr>
+  <tr><td><code>&lt;title&gt;</code></td><td>Browser-tab title and search-result title source.</td></tr>
+  <tr><td><code>&lt;body&gt;</code></td><td>Contains visible page content.</td></tr>
+  </tbody></table>
+</section>
+
+<section id="text">
+  <h2>3. Text and typography elements</h2>
+  <pre><code>&lt;h1&gt;Main heading&lt;/h1&gt;
+&lt;h2&gt;Section heading&lt;/h2&gt;
+&lt;h3&gt;Subsection heading&lt;/h3&gt;
+&lt;p&gt;A paragraph of text.&lt;/p&gt;
+&lt;strong&gt;Important text&lt;/strong&gt;
+&lt;em&gt;Emphasized text&lt;/em&gt;
+&lt;b&gt;Attention-drawing text&lt;/b&gt;
+&lt;i&gt;Alternate voice or mood&lt;/i&gt;
+&lt;mark&gt;Highlighted text&lt;/mark&gt;
+&lt;small&gt;Small print&lt;/small&gt;
+&lt;del&gt;Deleted text&lt;/del&gt;
+&lt;ins&gt;Inserted text&lt;/ins&gt;
+H&lt;sub&gt;2&lt;/sub&gt;O and x&lt;sup&gt;2&lt;/sup&gt;
+&lt;br&gt;  &lt;!-- line break --&gt;
+&lt;hr&gt;  &lt;!-- thematic break --&gt;
+&lt;blockquote cite="https://example.com"&gt;A long quotation.&lt;/blockquote&gt;
+&lt;q&gt;A short quotation.&lt;/q&gt;
+&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;
+&lt;code&gt;console.log("Hello")&lt;/code&gt;
+&lt;pre&gt;Preserves whitespace and line breaks.&lt;/pre&gt;
+&lt;time datetime="2026-10-15"&gt;October 15, 2026&lt;/time&gt;</code></pre>
+  <div class="note">Use headings according to the meaning and hierarchy of your content. Use CSS to change their visual size.</div>
+</section>
+
+<section id="links">
+  <h2>4. Links and file paths</h2>
+  <pre><code>&lt;!-- External link --&gt;
+&lt;a href="https://developer.mozilla.org/"&gt;HTML docs&lt;/a&gt;
+
+&lt;!-- New tab --&gt;
+&lt;a href="https://example.com" target="_blank" rel="noopener noreferrer"&gt;Open site&lt;/a&gt;
+
+&lt;!-- Another file in the same folder --&gt;
+&lt;a href="about.html"&gt;About&lt;/a&gt;
+
+&lt;!-- Jump to an element on this page --&gt;
+&lt;a href="#contact"&gt;Contact section&lt;/a&gt;
+
+&lt;!-- Email and phone links --&gt;
+&lt;a href="mailto:hello@example.com"&gt;Email us&lt;/a&gt;
+&lt;a href="tel:+911234567890"&gt;Call us&lt;/a&gt;
+
+&lt;!-- Download link --&gt;
+&lt;a href="files/guide.pdf" download&gt;Download guide&lt;/a&gt;</code></pre>
+  <ul><li><code>images/photo.jpg</code> — a file in a subfolder.</li><li><code>../index.html</code> — go up one folder.</li><li><code>https://example.com/page</code> — an absolute URL.</li></ul>
+</section>
+
+<section id="lists">
+  <h2>5. Lists</h2>
+  <pre><code>&lt;!-- Unordered list --&gt;
+&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Ordered list --&gt;
+&lt;ol&gt;
+  &lt;li&gt;Plan&lt;/li&gt;
+  &lt;li&gt;Build&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!-- Description list --&gt;
+&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;Markup language for web content.&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;!-- Ordered list options --&gt;
+&lt;ol start="5" type="A"&gt;&lt;li&gt;Fifth item&lt;/li&gt;&lt;/ol&gt;</code></pre>
+</section>
+
+<section id="images">
+  <h2>6. Images and responsive images</h2>
+  <pre><code>&lt;img src="images/cat.jpg" alt="A cat resting on a sofa" width="600" height="400"&gt;
+
+&lt;!-- Figure with caption --&gt;
+&lt;figure&gt;
+  &lt;img src="mountains.jpg" alt="Snowy mountains at sunrise" width="800" height="500"&gt;
+  &lt;figcaption&gt;Sunrise in the mountains.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;!-- Browser chooses a suitable image size --&gt;
+&lt;img
+  src="photo-800.jpg"
+  srcset="photo-400.jpg 400w, photo-800.jpg 800w, photo-1200.jpg 1200w"
+  sizes="(max-width: 600px) 100vw, 800px"
+  alt="A person cycling on a trail"
+  width="800" height="533"
+  loading="lazy"&gt;
+
+&lt;!-- Art direction for different screens --&gt;
+&lt;picture&gt;
+  &lt;source media="(max-width: 600px)" srcset="portrait-small.jpg"&gt;
+  &lt;img src="landscape-large.jpg" alt="A landscape at sunset"&gt;
+&lt;/picture&gt;</code></pre>
+  <div class="note">Write useful <code>alt</code> text for meaningful images. Use <code>alt=""</code> for purely decorative images so screen readers can skip them. Set image dimensions to reduce layout shifts.</div>
+</section>
+
+<section id="media">
+  <h2>7. Audio and video</h2>
+  <pre><code>&lt;audio controls preload="metadata"&gt;
+  &lt;source src="audio/song.mp3" type="audio/mpeg"&gt;
+  Your browser does not support audio.
+&lt;/audio&gt;
+
+&lt;video controls width="640" poster="preview.jpg" preload="metadata"&gt;
+  &lt;source src="video/demo.mp4" type="video/mp4"&gt;
+  &lt;track kind="captions" src="captions-en.vtt" srclang="en" label="English"&gt;
+  Your browser does not support video.
+&lt;/video&gt;</code></pre>
+  <p>Provide captions for speech and meaningful sounds. Avoid autoplaying sound; browser policies and user experience make it unreliable.</p>
+</section>
+
+<section id="tables">
+  <h2>8. Tables</h2>
+  <pre><code>&lt;table&gt;
+  &lt;caption&gt;Student marks&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th scope="col"&gt;Name&lt;/th&gt;&lt;th scope="col"&gt;Marks&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;th scope="row"&gt;Asha&lt;/th&gt;&lt;td&gt;88&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th scope="row"&gt;Ravi&lt;/th&gt;&lt;td&gt;91&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;&lt;th scope="row"&gt;Average&lt;/th&gt;&lt;td&gt;89.5&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+  <p>Use tables for tabular data, not for page layout. Use <code>scope</code> to associate header cells with rows or columns.</p>
+</section>
+
+<section id="semantic">
+  <h2>9. Semantic HTML layout</h2>
+  <pre><code>&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Site name&lt;/h1&gt;
+    &lt;nav aria-label="Main navigation"&gt;
+      &lt;a href="/"&gt;Home&lt;/a&gt;
+      &lt;a href="/about.html"&gt;About&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;h2&gt;Article title&lt;/h2&gt;
+      &lt;p&gt;Article content...&lt;/p&gt;
+    &lt;/article&gt;
+    &lt;aside&gt;Related information&lt;/aside&gt;
+    &lt;section&gt;&lt;h2&gt;More information&lt;/h2&gt;&lt;/section&gt;
+  &lt;/main&gt;
+  &lt;footer&gt;Copyright information&lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+  <div class="grid"><div class="mini"><strong><code>header</code></strong>Introductory content</div><div class="mini"><strong><code>nav</code></strong>Major navigation</div><div class="mini"><strong><code>main</code></strong>Main unique content</div><div class="mini"><strong><code>article</code></strong>Self-contained composition</div><div class="mini"><strong><code>section</code></strong>Thematic grouping</div><div class="mini"><strong><code>footer</code></strong>Footer for page or section</div></div>
+</section>
+
+<section id="forms">
+  <h2>10. Forms and input types</h2>
+  <pre><code>&lt;form action="/signup" method="post"&gt;
+  &lt;label for="name"&gt;Full name&lt;/label&gt;
+  &lt;input id="name" name="name" type="text" autocomplete="name" required&gt;
+
+  &lt;label for="email"&gt;Email&lt;/label&gt;
+  &lt;input id="email" name="email" type="email" autocomplete="email" required&gt;
+
+  &lt;label for="password"&gt;Password&lt;/label&gt;
+  &lt;input id="password" name="password" type="password" minlength="8" required&gt;
+
+  &lt;label for="age"&gt;Age&lt;/label&gt;
+  &lt;input id="age" name="age" type="number" min="1" max="120"&gt;
+
+  &lt;label for="date"&gt;Preferred date&lt;/label&gt;
+  &lt;input id="date" name="date" type="date"&gt;
+
+  &lt;label for="course"&gt;Course&lt;/label&gt;
+  &lt;select id="course" name="course"&gt;
+    &lt;option value=""&gt;Choose a course&lt;/option&gt;
+    &lt;option value="html"&gt;HTML&lt;/option&gt;
+    &lt;option value="css"&gt;CSS&lt;/option&gt;
+  &lt;/select&gt;
+
+  &lt;label for="message"&gt;Message&lt;/label&gt;
+  &lt;textarea id="message" name="message" rows="4"&gt;&lt;/textarea&gt;
+
+  &lt;label&gt;&lt;input type="checkbox" name="updates" value="yes"&gt; Send me updates&lt;/label&gt;
+  &lt;button type="submit"&gt;Sign up&lt;/button&gt;
+  &lt;button type="reset"&gt;Reset&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+  <h3>Common input types</h3>
+  <p><code>text</code>, <code>email</code>, <code>password</code>, <code>number</code>, <code>tel</code>, <code>url</code>, <code>search</code>, <code>date</code>, <code>time</code>, <code>datetime-local</code>, <code>month</code>, <code>week</code>, <code>color</code>, <code>range</code>, <code>file</code>, <code>checkbox</code>, <code>radio</code>, <code>hidden</code>, <code>submit</code>, <code>reset</code>, and <code>button</code>.</p>
+  <div class="note warn">HTML validation improves usability but is not security. A real application must validate and sanitize submitted data on the server. A form also needs a working server endpoint to submit data.</div>
+  <h3>Try a small form</h3>
+  <div class="demo">
+    <form id="demo-form">
+      <label for="demo-name">Your name</label><br><input id="demo-name" name="demo-name" required placeholder="Enter your name"><br><br>
+      <label for="demo-email">Email</label><br><input id="demo-email" name="demo-email" type="email" required placeholder="you@example.com"><br><br>
+      <button type="submit">Test form</button>
+      <p id="form-result" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<section id="attributes">
+  <h2>11. Global attributes</h2>
+  <pre><code>&lt;p id="intro" class="lead"&gt;Intro paragraph&lt;/p&gt;
+&lt;div title="Extra information"&gt;Hover for a tooltip in many browsers&lt;/div&gt;
+&lt;p lang="fr"&gt;Bonjour&lt;/p&gt;
+&lt;p dir="rtl"&gt;Text with right-to-left direction&lt;/p&gt;
+&lt;div data-user-id="42"&gt;Custom data attribute&lt;/div&gt;
+&lt;button hidden&gt;Hidden button&lt;/button&gt;
+&lt;p contenteditable="true"&gt;You can edit this text in the browser.&lt;/p&gt;
+&lt;p draggable="true"&gt;Potentially draggable text&lt;/p&gt;
+&lt;input required disabled&gt;
+&lt;div class="card featured"&gt;Classes can be reused.&lt;/div&gt;</code></pre>
+  <table><thead><tr><th>Attribute</th><th>Use</th></tr></thead><tbody>
+  <tr><td><code>id</code></td><td>Unique identifier in the document.</td></tr><tr><td><code>class</code></td><td>Reusable grouping for CSS and JavaScript.</td></tr>
+  <tr><td><code>style</code></td><td>Inline CSS; generally prefer separate stylesheets for maintainability.</td></tr><tr><td><code>title</code></td><td>Advisory information; do not rely on it as the only label.</td></tr>
+  <tr><td><code>data-*</code></td><td>Stores custom data on an element.</td></tr><tr><td><code>hidden</code></td><td>Indicates that an element is not currently relevant for display.</td></tr>
+  <tr><td><code>tabindex</code></td><td>Controls focusability and tab order; avoid positive values.</td></tr><tr><td><code>contenteditable</code></td><td>Makes an element's content editable by the user.</td></tr>
+  </tbody></table>
+</section>
+
+<section id="entities">
+  <h2>12. Character entities</h2>
+  <table><thead><tr><th>Entity</th><th>Character</th><th>Meaning</th></tr></thead><tbody>
+  <tr><td><code>&amp;amp;</code></td><td>&amp;</td><td>Ampersand</td></tr><tr><td><code>&amp;lt;</code></td><td>&lt;</td><td>Less than</td></tr>
+  <tr><td><code>&amp;gt;</code></td><td>&gt;</td><td>Greater than</td></tr><tr><td><code>&amp;quot;</code></td><td>&quot;</td><td>Double quote</td></tr>
+  <tr><td><code>&amp;apos;</code></td><td>'</td><td>Apostrophe</td></tr><tr><td><code>&amp;nbsp;</code></td><td> </td><td>Non-breaking space</td></tr>
+  <tr><td><code>&amp;copy;</code></td><td>©</td><td>Copyright</td></tr><tr><td><code>&amp;reg;</code></td><td>®</td><td>Registered trademark</td></tr>
+  <tr><td><code>&amp;trade;</code></td><td>™</td><td>Trademark</td></tr>
+  </tbody></table>
+  <p>Use UTF-8 and type ordinary Unicode characters directly when appropriate. Escape special characters when they would otherwise be interpreted as markup.</p>
+</section>
+
+<section id="embed">
+  <h2>13. Embedded content</h2>
+  <pre><code>&lt;!-- Embed another page; only use trusted sources --&gt;
+&lt;iframe
+  src="https://example.com"
+  title="Example website"
+  width="600" height="400"
+  loading="lazy"
+  sandbox&gt;
+&lt;/iframe&gt;
+
+&lt;!-- External scalable vector graphic --&gt;
+&lt;img src="logo.svg" alt="Company logo" width="160" height="50"&gt;
+
+&lt;!-- External document --&gt;
+&lt;object data="document.pdf" type="application/pdf" width="600" height="500"&gt;
+  &lt;a href="document.pdf"&gt;Open the PDF&lt;/a&gt;
+&lt;/object&gt;</code></pre>
+  <div class="note warn">Embedding third-party pages may be blocked by their security policy. Use iframe sandbox permissions carefully, and never embed untrusted content without considering security and privacy.</div>
+</section>
+
+<section id="interactive">
+  <h2>14. Interactive and disclosure elements</h2>
+  <pre><code>&lt;details&gt;
+  &lt;summary&gt;What is HTML?&lt;/summary&gt;
+  HTML is the standard markup language for web pages.
+&lt;/details&gt;
+
+&lt;dialog id="info-dialog"&gt;
+  &lt;p&gt;This is a dialog.&lt;/p&gt;
+  &lt;form method="dialog"&gt;&lt;button&gt;Close&lt;/button&gt;&lt;/form&gt;
+&lt;/dialog&gt;
+&lt;button onclick="document.getElementById('info-dialog').showModal()"&gt;Open dialog&lt;/button&gt;
+
+&lt;label for="progress"&gt;Course progress&lt;/label&gt;
+&lt;progress id="progress" value="65" max="100"&gt;65%&lt;/progress&gt;
+
+&lt;label for="disk"&gt;Disk usage&lt;/label&gt;
+&lt;meter id="disk" min="0" max="100" low="30" high="80" optimum="20" value="45"&gt;45%&lt;/meter&gt;
+
+&lt;label for="volume"&gt;Volume&lt;/label&gt;
+&lt;input id="volume" type="range" min="0" max="100" value="50"&gt;</code></pre>
+  <div class="demo">
+    <details><summary><strong>Click to reveal: what does semantic HTML mean?</strong></summary><p>It means choosing elements that describe the role and meaning of the content, such as <code>nav</code>, <code>main</code>, and <code>article</code>.</p></details>
+  </div>
+</section>
+
+<section id="metadata">
+  <h2>15. Metadata, SEO, and resource links</h2>
+  <pre><code>&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;title&gt;Useful Page Title | Site Name&lt;/title&gt;
+  &lt;meta name="description" content="A concise, accurate page summary."&gt;
+  &lt;link rel="canonical" href="https://example.com/page"&gt;
+  &lt;link rel="icon" href="/favicon.ico"&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+  &lt;script src="app.js" defer&gt;&lt;/script&gt;
+&lt;/head&gt;</code></pre>
+  <ul><li>Give each page a unique, descriptive title.</li><li>Write a clear description that accurately summarizes the page.</li><li>Use a canonical URL only when appropriate and correct.</li><li>Use meaningful headings and descriptive link text.</li><li>Use structured data only when it accurately represents visible page content.</li></ul>
+  <div class="note">Metadata can help browsers and search engines understand a page, but it does not guarantee a particular ranking or search-result appearance.</div>
+</section>
+
+<section id="accessibility">
+  <h2>16. Accessibility essentials</h2>
+  <ul>
+    <li>Set the correct page language using <code>lang</code>.</li>
+    <li>Use semantic elements and a logical heading hierarchy.</li>
+    <li>Give form fields visible labels connected with <code>for</code> and <code>id</code>.</li>
+    <li>Provide meaningful alternative text for informative images.</li>
+    <li>Make sure interactive controls can be used with a keyboard.</li>
+    <li>Use descriptive link text instead of repeated “click here”.</li>
+    <li>Use ARIA when necessary, and prefer native HTML semantics when available.</li>
+    <li>Do not communicate meaning through color alone.</li>
+    <li>Use captions for video and transcripts when useful for audio.</li>
+  </ul>
+  <pre><code>&lt;label for="search"&gt;Search articles&lt;/label&gt;
+&lt;input id="search" name="q" type="search"&gt;
+
+&lt;button type="button" aria-expanded="false" aria-controls="menu"&gt;
+  Toggle menu
+&lt;/button&gt;
+&lt;nav id="menu" aria-label="Main navigation"&gt;...&lt;/nav&gt;
+
+&lt;p role="status" aria-live="polite"&gt;Saved successfully.&lt;/p&gt;</code></pre>
+  <div class="note">ARIA attributes do not automatically add behavior. If you build a custom widget, implement its keyboard behavior, focus management, and state updates too.</div>
+</section>
+
+<section id="advanced">
+  <span class="tag">LEVEL 3 · ADVANCED</span><h2>17. Advanced HTML features</h2>
+  <h3>17.1 Template element</h3>
+  <p>A <code>template</code> stores markup that is not rendered until JavaScript clones or inserts it.</p>
+  <pre><code>&lt;template id="card-template"&gt;
+  &lt;article class="card"&gt;
+    &lt;h2&gt;Card title&lt;/h2&gt;
+    &lt;p&gt;Card description&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/template&gt;
+
+&lt;div id="cards"&gt;&lt;/div&gt;
+&lt;script&gt;
+  const template = document.querySelector("#card-template");
+  const clone = template.content.cloneNode(true);
+  document.querySelector("#cards").append(clone);
+&lt;/script&gt;</code></pre>
+  <h3>17.2 Custom data attributes</h3>
+  <pre><code>&lt;button data-product-id="p42" data-price="199"&gt;Add to cart&lt;/button&gt;
+&lt;script&gt;
+  const button = document.querySelector("button[data-product-id]");
+  console.log(button.dataset.productId); // "p42"
+  console.log(button.dataset.price);     // "199" (string)
+&lt;/script&gt;</code></pre>
+  <h3>17.3 Defer and async scripts</h3>
+  <pre><code>&lt;!-- Downloads in parallel, executes when ready; order not guaranteed --&gt;
+&lt;script src="analytics.js" async&gt;&lt;/script&gt;
+
+&lt;!-- Downloads in parallel, runs after parsing, preserves order --&gt;
+&lt;script src="app.js" defer&gt;&lt;/script&gt;
+
+&lt;!-- JavaScript module --&gt;
+&lt;script type="module" src="main.js"&gt;&lt;/script&gt;</code></pre>
+  <h3>17.4 Native lazy loading</h3>
+  <pre><code>&lt;img src="gallery/photo.jpg" alt="Gallery scene" loading="lazy" width="800" height="600"&gt;
+&lt;iframe src="https://example.com/embed" title="Embedded content" loading="lazy"&gt;&lt;/iframe&gt;</code></pre>
+  <p>Use lazy loading for off-screen content, not usually for the main hero image that is immediately visible.</p>
+  <h3>17.5 Responsive image sources</h3>
+  <pre><code>&lt;picture&gt;
+  &lt;source type="image/avif" srcset="hero.avif"&gt;
+  &lt;source type="image/webp" srcset="hero.webp"&gt;
+  &lt;img src="hero.jpg" alt="Description of the hero image" width="1200" height="700"&gt;
+&lt;/picture&gt;</code></pre>
+  <h3>17.6 Ruby annotations (often used for East Asian pronunciation)</h3>
+  <pre><code>&lt;ruby&gt;漢 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;かん&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;</code></pre>
+  <h3>17.7 Bidirectional text isolation</h3>
+  <pre><code>&lt;p&gt;Username: &lt;bdi&gt;user_مثال&lt;/bdi&gt;&lt;/p&gt;
+&lt;p&gt;&lt;bdo dir="rtl"&gt;This text direction is overridden.&lt;/bdo&gt;&lt;/p&gt;</code></pre>
+  <h3>17.8 Popover API</h3>
+  <pre><code>&lt;button popovertarget="tip"&gt;Show tip&lt;/button&gt;
+&lt;div id="tip" popover&gt;This is a native popover.&lt;/div&gt;</code></pre>
+  <p>Modern browser support varies by feature. Check compatibility if your audience uses older browsers.</p>
+  <h3>17.9 Details, summary, and dialog</h3>
+  <p><code>details</code> and <code>summary</code> provide a built-in disclosure widget. <code>dialog</code> provides a native dialog element; JavaScript typically opens it with <code>show()</code> or <code>showModal()</code>.</p>
+  <h3>17.10 Microdata (basic illustration)</h3>
+  <pre><code>&lt;div itemscope itemtype="https://schema.org/Person"&gt;
+  &lt;span itemprop="name"&gt;Example Person&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+  <p>Use structured data formats according to the needs of your project and the search engine documentation. Avoid adding misleading or hidden claims.</p>
+</section>
+
+<section id="obsolete">
+  <h2>18. Obsolete or discouraged elements</h2>
+  <p>Avoid old presentational HTML such as <code>&lt;font&gt;</code>, <code>&lt;center&gt;</code>, <code>&lt;marquee&gt;</code>, and layout tables. Use CSS for visual presentation and semantic HTML for structure.</p>
+  <table><thead><tr><th>Instead of</th><th>Prefer</th></tr></thead><tbody>
+  <tr><td><code>&lt;center&gt;</code></td><td>CSS <code>text-align: center</code> or layout styles</td></tr>
+  <tr><td><code>&lt;font color="red"&gt;</code></td><td>CSS <code>color</code></td></tr>
+  <tr><td>Tables for layout</td><td>CSS Flexbox or Grid</td></tr>
+  <tr><td><code>&lt;big&gt;</code></td><td>CSS font sizing or a semantically appropriate element</td></tr>
+  </tbody></table>
+</section>
+
+<section id="practice">
+  <h2>19. Practice project: personal portfolio page</h2>
+  <p>Build a small portfolio using the concepts above. This example is intentionally simple so you can extend it with CSS and JavaScript later.</p>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;title&gt;My Portfolio&lt;/title&gt;
+  &lt;meta name="description" content="Projects and contact information."&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Your Name&lt;/h1&gt;
+    &lt;p&gt;Student · Web Developer · Designer&lt;/p&gt;
+    &lt;nav aria-label="Main navigation"&gt;
+      &lt;a href="#about"&gt;About&lt;/a&gt;
+      &lt;a href="#projects"&gt;Projects&lt;/a&gt;
+      &lt;a href="#contact"&gt;Contact&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+  &lt;main&gt;
+    &lt;section id="about"&gt;
+      &lt;h2&gt;About me&lt;/h2&gt;
+      &lt;p&gt;Write a short introduction about yourself.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section id="projects"&gt;
+      &lt;h2&gt;Projects&lt;/h2&gt;
+      &lt;article&gt;
+        &lt;h3&gt;Project One&lt;/h3&gt;
+        &lt;p&gt;Explain what you built and what you learned.&lt;/p&gt;
+        &lt;a href="https://example.com"&gt;View project&lt;/a&gt;
+      &lt;/article&gt;
+    &lt;/section&gt;
+    &lt;section id="contact"&gt;
+      &lt;h2&gt;Contact&lt;/h2&gt;
+      &lt;p&gt;Email: &lt;a href="mailto:you@example.com"&gt;you@example.com&lt;/a&gt;&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+  &lt;footer&gt;&lt;p&gt;&amp;copy; 2026 Your Name&lt;/p&gt;&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  <h3>Suggested learning path</h3>
+  <ol><li>Practice structure, text, links, images, and lists.</li><li>Build accessible forms and data tables.</li><li>Use semantic layout and responsive images.</li><li>Learn CSS layout, typography, and responsive design.</li><li>Add JavaScript for behavior, then learn browser APIs and performance.</li><li>Test keyboard navigation, mobile layouts, and HTML validity.</li></ol>
+</section>
+
+<section id="cheatsheet">
+  <h2>20. Quick HTML cheat sheet</h2>
+  <table><thead><tr><th>Goal</th><th>Element</th></tr></thead><tbody>
+  <tr><td>Heading / paragraph</td><td><code>h1</code>–<code>h6</code>, <code>p</code></td></tr>
+  <tr><td>Link / image</td><td><code>a</code>, <code>img</code></td></tr>
+  <tr><td>List</td><td><code>ul</code>, <code>ol</code>, <code>li</code>, <code>dl</code></td></tr>
+  <tr><td>Table</td><td><code>table</code>, <code>thead</code>, <code>tbody</code>, <code>tr</code>, <code>th</code>, <code>td</code></td></tr>
+  <tr><td>Form</td><td><code>form</code>, <code>label</code>, <code>input</code>, <code>select</code>, <code>textarea</code>, <code>button</code></td></tr>
+  <tr><td>Page layout</td><td><code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code>, <code>article</code>, <code>aside</code>, <code>footer</code></td></tr>
+  <tr><td>Media</td><td><code>img</code>, <code>picture</code>, <code>audio</code>, <code>video</code>, <code>track</code></td></tr>
+  <tr><td>Disclosure / dialog</td><td><code>details</code>, <code>summary</code>, <code>dialog</code></td></tr>
+  <tr><td>Script / stylesheet</td><td><code>script</code>, <code>link</code>, <code>style</code></td></tr>
+  <tr><td>Metadata</td><td><code>title</code>, <code>meta</code>, <code>link</code></td></tr>
+  </tbody></table>
+  <div class="note">HTML defines the page's structure. For polished websites, learn CSS next, then JavaScript. Validate your HTML and test your page with keyboard navigation and different screen sizes.</div>
+</section>
+<footer>HTML Handbook · Part 1 of 3 · <a href="css.html">Continue to CSS</a> · <a href="javascript.html">Continue to JavaScript</a></footer>
+</main>
+</div>
+  <script src="script.js" defer></script>
+</body>
+</html>
